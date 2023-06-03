@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, About, Services, Portfolio } from "./pages";
-import { Header, Footer } from "./commen";
+import { Home, Signin, Signup, EventsFeed } from "./pages";
+import { Header } from "./commen";
 
 const App = () => (
   <BrowserRouter>
@@ -9,12 +9,11 @@ const App = () => (
       <main>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          {/* <Route path="/about" exact element={<About />} /> */}
-          {/* <Route path="/services" exact element={<Services />} /> */}
-          {/* <Route path="/portfolio" exact element={<Portfolio />} /> */}
+          <Route path="/auth/signin" exact element={<Signin />} />
+          <Route path="/auth/signup" exact element={<Signup />} />
+          <Route path="/events" exact element={<EventsFeed />} />
         </Routes>
       </main>
-      {/* <Footer /> */}
     </div>
   </BrowserRouter>
 );
