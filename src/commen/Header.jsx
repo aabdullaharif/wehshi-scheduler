@@ -17,6 +17,8 @@ import {
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 
+import logo from "../assets/logo.png";
+
 const Header = () => {
   const [showBasic, setShowBasic] = useState(false);
 
@@ -24,7 +26,7 @@ const Header = () => {
     <MDBNavbar expand="lg" light bgColor="light">
       <MDBContainer fluid>
         <MDBNavbarBrand href="/">
-          <img src="../../public/logo.png" alt="image" />
+          <img src={logo} alt="image" />
         </MDBNavbarBrand>
 
         <MDBNavbarToggler
@@ -39,32 +41,19 @@ const Header = () => {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <MDBNavbarItem>
-              <MDBNavbarLink aria-current="page" href="/events">
+              <MDBNavbarLink aria-current="page" href="/eventsfeed">
                 Events
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href="/events">Link</MDBNavbarLink>
-            </MDBNavbarItem>
-
-            <MDBNavbarItem>
-              <MDBDropdown>
-                <MDBDropdownToggle tag="a" className="nav-link" role="button">
-                  Dropdown
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
-                  <MDBDropdownItem link>Action</MDBDropdownItem>
-                  <MDBDropdownItem link>Another action</MDBDropdownItem>
-                  <MDBDropdownItem link>Something else here</MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
+              <MDBNavbarLink href="/eventlist">Event List</MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
 
           <div className="d-flex input-group w-auto">
-            <Link className="header-btn" to="auth/login">
+            <Link className="header-btn" to="auth/signin">
               <MDBBtn className="m-2" tag="div" color="warning" size="lg">
-                Login
+                Signin
               </MDBBtn>
             </Link>
             <Link className="header-btn" to="auth/signup">

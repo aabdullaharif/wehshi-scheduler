@@ -8,7 +8,7 @@ const Banner = () => {
       id="main-banner"
       className="p-5 text-center bg-image"
       style={{
-        backgroundImage: "url('../../public/main-banner.jpg')",
+        backgroundImage: "url('/main-banner.jpg')",
       }}
     >
       <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}>
@@ -19,12 +19,12 @@ const Banner = () => {
               There are many events happening here. Join as participant or
               organizer!
             </p>
-            <Link to="auth/">
+            <Link to="/eventsfeed">
               <MDBBtn className="m-2" tag="div" color="warning" size="lg">
                 Attend Event
               </MDBBtn>
             </Link>
-            <Link to="auth/">
+            <Link to="/createevent">
               <MDBBtn className="m-2" tag="div" color="warning" size="lg">
                 Create Event
               </MDBBtn>

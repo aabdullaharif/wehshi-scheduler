@@ -1,6 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, About, Services, Portfolio } from "./pages";
-import { Header, Footer } from "./commen";
+import {
+  Home,
+  Signin,
+  Signup,
+  EventsFeed,
+  CreateEvent,
+  EventDetail,
+  EventList,
+} from "./pages";
+import { PageNotFound } from "./components";
+import { Header } from "./commen";
 
 const App = () => (
   <BrowserRouter>
@@ -9,12 +18,15 @@ const App = () => (
       <main>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          {/* <Route path="/about" exact element={<About />} /> */}
-          {/* <Route path="/services" exact element={<Services />} /> */}
-          {/* <Route path="/portfolio" exact element={<Portfolio />} /> */}
+          <Route path="/auth/signin" exact element={<Signin />} />
+          <Route path="/auth/signup" exact element={<Signup />} />
+          <Route path="/eventsfeed" exact element={<EventsFeed />} />
+          <Route path="/createevent" exact element={<CreateEvent />} />
+          <Route path="/eventdetail/:id" element={<EventDetail />} />
+          <Route path="/eventlist" exact element={<EventList />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
-      {/* <Footer /> */}
     </div>
   </BrowserRouter>
 );
