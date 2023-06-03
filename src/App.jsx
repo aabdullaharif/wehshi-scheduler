@@ -1,5 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Signin, Signup, EventsFeed } from "./pages";
+import {
+  Home,
+  Signin,
+  Signup,
+  EventsFeed,
+  CreateEvent,
+  EventDetail,
+  EventList,
+} from "./pages";
+import { PageNotFound } from "./components";
 import { Header } from "./commen";
 
 const App = () => (
@@ -11,7 +20,11 @@ const App = () => (
           <Route path="/" exact element={<Home />} />
           <Route path="/auth/signin" exact element={<Signin />} />
           <Route path="/auth/signup" exact element={<Signup />} />
-          <Route path="/events" exact element={<EventsFeed />} />
+          <Route path="/eventsfeed" exact element={<EventsFeed />} />
+          <Route path="/createevent" exact element={<CreateEvent />} />
+          <Route path="/eventdetail/:id" element={<EventDetail />} />
+          <Route path="/eventlist" exact element={<EventList />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
     </div>
