@@ -84,6 +84,13 @@ a {
 .eventcard > a {
   width: calc(100% / 2 - 10px);
 }
+.registernow {
+  display: block;
+  margin-top: 40px;
+}
+td {
+  text-align: center;
+}
 
 @media screen and (min-width: 992px) {
   .detail-wrapper {
