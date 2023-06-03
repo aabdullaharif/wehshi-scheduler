@@ -66,6 +66,15 @@ const EventDetail = () => {
               <i className="location-icon fa-sharp fa-solid fa-location-dot"></i>
               {datas.event_location}
             </div>
+
+            <form>
+              <input
+                type="submit"
+                className="registernow"
+                color="warning"
+                value="Register Now"
+              />
+            </form>
           </div>
         </div>
       </div>
