@@ -1,0 +1,26 @@
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.navbar-brand {
+  max-width: 150px;
+}
+img {
+  width: 100%;
+}
+a {
+  display: inline-block;
+}
+
+#main-banner {
+  height: 100vh;
+}
+.wrapper {
+  overflow: hidden;
+  height: 100vh;
+}
+.header-btn {
+  white-space: nowrap;
+}
